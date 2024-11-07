@@ -1,18 +1,147 @@
+/* Homepage Styles */
 .homepage {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-image: url('image.jpg'); /* Ensure the correct path to the image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Optional: Adds parallax effect */
-    color: rgb(80, 171, 245); /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for text readability */
+    height: 100vh;
+    background-image: url('image.jpg'); /* Make sure to replace with the correct image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    animation: pulseBackground 10s ease-in-out infinite; /* Adds a soft pulsing background effect */
 }
 
+/* Add overlay for vibrant contrast */
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.6), rgba(0, 200, 255, 0.6)); /* Color overlay with gradient */
+    z-index: 0;
+    animation: pulseOverlay 5s ease-in-out infinite; /* Pulsing effect for overlay */
+}
+
+/* Pulsing effect for the background overlay */
+@keyframes pulseOverlay {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Heading Style */
 h1 {
-    font-size: 3em;
-    font-family: cursive;
+    font-size: 4.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #f8f9fa;
+    text-align: center;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out, bounce 1.5s ease-in-out infinite alternate; /* Animations for entry and bounce */
+}
+
+/* Subtle entry fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bouncing effect */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Style */
+.explore-btn {
+    padding: 15px 30px;
+    background-color: #ff4500;
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.explore-btn:hover {
+    transform: scale(1.1); /* Button grow effect */
+    background-color: #ff6347; /* Slightly darker shade */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Button focus effect */
+.explore-btn:focus {
+    outline: none;
+    background-color: #ff5722;
+}
+
+/* Pulsing background animation */
+@keyframes pulseBackground {
+    0% {
+        opacity: 0.85;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.85;
+    }
+}
+
+/* Adding text shadow to the h1 for more visual impact */
+h1 {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Footer Style (Optional) */
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .explore-btn {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
 }

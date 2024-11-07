@@ -1,63 +1,110 @@
 /* About Us Styles */
 
 .about-section {
-    background-color: #f9f9f9; /* Light background color */
-    padding: 40px 20px; /* Top-bottom and left-right padding */
-    text-align: center; /* Center the text */
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Soft gradient background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
-    max-width: 1200px; /* Max width for larger screens */
-    margin: 0 auto; /* Center the container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h2 {
-    color:#007bff; /* Darker text for headings */
-    margin-bottom: 20px; /* Spacing below the heading */
-    font-size: 2.5rem; /* Font size for the main heading */
+    color: #007bff;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for heading */
 }
 
 p {
-    color:cadetblue; /* Lighter color for body text */
-    font-size: 1.1rem; /* Font size for paragraphs */
-    line-height: 1.5; /* Improved line height for readability */
-    margin-bottom: 30px; /* Spacing below the paragraph */
-  
-    
+    color: #444;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in effect */
+}
+
+/* Animation for paragraph */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Team Grid Styles */
 .team-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Gap between grid items */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
 }
 
 .team-member {
-    background-color: #fff; /* White background for team members */
-    border: 1px solid #ddd; /* Light border around team member cards */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.2s; /* Transition for hover effect */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transition: transform 0.5s;
+    transform: scale(1);
+    z-index: 0;
+}
+
+.team-member:hover::before {
+    transform: scale(1.5); /* Glow effect on hover */
 }
 
 .team-member:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    
-
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(145deg, #00c6ff, #0072ff); /* Vivid gradient on hover */
 }
 
 .team-member h3 {
-    color: #007bff; /* Color for names */
-    margin: 10px 0; /* Spacing above and below names */
-    font-size: 1.5rem; /* Font size for names */
+    color: #ffffff;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .team-member p {
-    margin: 5px 0; /* Spacing for role and contact */
-    font-size: 1rem; /* Font size for role and contact */
-    color: #555; /* Color for role and contact */
+    font-size: 1.1rem;
+    color: #f9f9f9;
+    margin: 8px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }

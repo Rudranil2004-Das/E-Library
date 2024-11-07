@@ -27,24 +27,25 @@ const Login = ({ setIsAuthenticated }) => {
                 // Redirect to home page after successful login
                 navigate('/');
             } else {
-                setError('Invalid credentials. Please try again.');
+                setError('Invalid email or password. Please check and try again.');
             }
         } else {
-            setError('Please register before logging in.');
+            setError('No registered user found. Please ensure you have registered first.');
         }
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleLogin}>
+        <div className="login-container">
+            <h2>Login to Your Account</h2>
+            {error && <p className="error-message">{error}</p>}
+            <form onSubmit={handleLogin} className="login-form">
                 <input 
                     type="email" 
-                    placeholder="Email" 
+                    placeholder="Email Address" 
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
                     required 
+                    className="form-input"
                 />
                 <input 
                     type="password" 
@@ -52,8 +53,9 @@ const Login = ({ setIsAuthenticated }) => {
                     value={password} 
                     onChange={(e) => setPassword(e.target.value)} 
                     required 
+                    className="form-input"
                 />
-                <button type="submit">Login</button>
+                <button type="submit" className="login-button">Login</button>
             </form>
         </div>
     );

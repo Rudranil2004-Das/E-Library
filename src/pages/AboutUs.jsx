@@ -5,16 +5,18 @@ const AboutUs = () => {
     return (
         <section className="about-section">
             <div className="container">
-                <h2>About Us</h2>
-                <p>
-                    We are a team of passionate individuals dedicated to providing the best e-library experience. Meet our talented members:
-                </p>
-                <div className="team-grid">
-                    <div className="team-member">
-                        <h3>Rudranil Das</h3>
-                        <p>Support Specialist</p>
-                        <p>Contact No.: 7439088691</p>
-                    </div>
+            <h2>About Us</h2>
+<p>
+    Welcome to our Book Search platform, designed to offer a simple and efficient way to explore and discover books. Our mission is to create a user-friendly experience that makes finding your next read both easy and enjoyable.
+</p>
+<div className="team-grid">
+    <div className="team-member">
+        <h3>Rudranil Das</h3>
+        <p>Founder & Lead Developer</p>
+        <p>Contact: +91 74390 88691</p>
+    </div>
+
+
                 </div>
             </div>
         </section>
