@@ -1,0 +1,63 @@
+/* About Us Styles */
+
+.about-section {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 40px 20px; /* Top-bottom and left-right padding */
+    text-align: center; /* Center the text */
+}
+
+.container {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+}
+
+h2 {
+    color:#007bff; /* Darker text for headings */
+    margin-bottom: 20px; /* Spacing below the heading */
+    font-size: 2.5rem; /* Font size for the main heading */
+}
+
+p {
+    color:cadetblue; /* Lighter color for body text */
+    font-size: 1.1rem; /* Font size for paragraphs */
+    line-height: 1.5; /* Improved line height for readability */
+    margin-bottom: 30px; /* Spacing below the paragraph */
+  
+    
+}
+
+/* Team Grid Styles */
+.team-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between grid items */
+}
+
+.team-member {
+    background-color: #fff; /* White background for team members */
+    border: 1px solid #ddd; /* Light border around team member cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    
+
+}
+
+.team-member h3 {
+    color: #007bff; /* Color for names */
+    margin: 10px 0; /* Spacing above and below names */
+    font-size: 1.5rem; /* Font size for names */
+}
+
+.team-member p {
+    margin: 5px 0; /* Spacing for role and contact */
+    font-size: 1rem; /* Font size for role and contact */
+    color: #555; /* Color for role and contact */
+}
