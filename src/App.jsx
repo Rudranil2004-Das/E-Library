@@ -7,7 +7,7 @@ import BookList from './pages/BookList';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutUs from './pages/AboutUs';
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isRegistered, setIsRegistered] = useState(false);
