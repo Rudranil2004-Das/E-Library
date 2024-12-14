@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/about</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Book List Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/books</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Login Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/login</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Register Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/register</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Not Found Page -->
+  <url>
+    <loc>http://e-library-peach.vercel.app/*</loc>
+    <lastmod>2024-12-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
